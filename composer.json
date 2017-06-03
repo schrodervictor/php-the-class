@@ -1,0 +1,17 @@
+{
+  "name": "schrodervictor/php-the-class",
+  "authors": [
+    {
+      "name": "Victor Schroeder",
+      "email": "schrodervictor@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "PHP": "lib"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*"
+  }
+}
