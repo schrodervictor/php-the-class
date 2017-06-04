@@ -18,10 +18,13 @@ build-dev: COMPOSER_FLAGS = --dev
 build-dev: composer-build
 	@echo 'Build-dev successful!'
 
-test: test-unit
+test: test-unit test-quickcheck
 
 test-unit: build-dev
 	$(PHPUNIT) --configuration tests/unit.xml $(PHPUNIT_FLAGS)
+
+test-quickcheck: build-dev
+	$(PHPUNIT) --configuration tests/quickcheck.xml $(PHPUNIT_FLAGS)
 
 composer-build: $(COMPOSER) vendor
 
